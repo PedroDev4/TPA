@@ -12,11 +12,10 @@ function calcular() {
   }
 
   // calculo de distancia
-  let velocidadeMedia = distancia / tempo;
-  let pace = tempo / distancia;
-  let gastoCalorico = velocidadeMedia * peso * 0.0175 * (tempo / 60);
+  let velocidadeMedia = (distancia / tempo).toFixed(2);
+  let gastoCalorico = (velocidadeMedia * peso * 0.0175 * (tempo / 60)).toFixed(2);
 
-  Math.round(pace);
+  velocidadeMedia = Math.round(2);
 
   document.getElementById("message").innerHTML = `Olá ${nome}! Você percorreu ${distancia}km em ${tempo}horas. Sua velocidade média foi de ${velocidadeMedia}km/h, você teve um gasto calorico de ${gastoCalorico}`;
 }
